@@ -3,7 +3,8 @@ import { UpbitTicker, UpbitCandle, AIAnalysisResult, GroundingSource, NewsArticl
 
 // Initialize Gemini Client
 // NOTE: process.env.API_KEY is injected by the environment.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
 
 export const analyzeCoin = async (
   marketName: string,
